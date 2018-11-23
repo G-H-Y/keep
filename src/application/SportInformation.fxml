@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="695.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SportInformation">
+   <children>
+      <RadioButton fx:id="Treadmill" layoutX="39.0" layoutY="26.0" mnemonicParsing="false" text="跑步机课程" />
+      <RadioButton fx:id="HIIT" layoutX="220.0" layoutY="21.0" mnemonicParsing="false" text="HIIT燃脂" />
+      <RadioButton fx:id="AerobicExer" layoutX="384.0" layoutY="21.0" mnemonicParsing="false" text="有氧操课" />
+      <RadioButton fx:id="Warmup" layoutX="608.0" layoutY="21.0" mnemonicParsing="false" text="热身拉伸" />
+      <ListView fx:id="SportList" layoutX="417.0" layoutY="87.0" prefHeight="522.0" prefWidth="415.0" />
+      <ImageView fx:id="SportImg" fitHeight="150.0" fitWidth="388.0" layoutX="14.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="SportName" layoutX="14.0" layoutY="268.0" prefHeight="24.0" prefWidth="117.0" />
+      <Label fx:id="UnitCalories" layoutX="220.0" layoutY="268.0" prefHeight="24.0" prefWidth="122.0" />
+      <TextFlow fx:id="Step" layoutX="14.0" layoutY="310.0" prefHeight="299.0" prefWidth="388.0" />
+      <Label layoutX="847.0" layoutY="391.0" text="运动项目:" />
+      <TextField fx:id="SelectSport" layoutX="850.0" layoutY="442.0" prefHeight="36.0" prefWidth="242.0" />
+      <Label layoutX="847.0" layoutY="491.0" text="消耗热量：" />
+      <TextField fx:id="BurnCalories" layoutX="847.0" layoutY="535.0" prefHeight="36.0" prefWidth="242.0" />
+      <Label layoutX="14.0" layoutY="632.0" text="训练组数：" />
+      <Slider fx:id="TrainNum" blockIncrement="1.0" layoutX="115.0" layoutY="632.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="26.0" prefWidth="539.0" showTickLabels="true" showTickMarks="true" />
+      <Button fx:id="AddRecord" layoutX="904.0" layoutY="609.0" mnemonicParsing="false" onMouseClicked="#AddRecordClicked" prefHeight="36.0" prefWidth="109.0" text="添加" />
+      <Button fx:id="ReturnHome" layoutX="917.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#ReturnHomeClicked" prefHeight="36.0" prefWidth="109.0" text="个人主页" />
+      <Label fx:id="ShowTrainNum" layoutX="685.0" layoutY="620.0" prefHeight="24.0" prefWidth="90.0" />
+   </children>
+</AnchorPane>

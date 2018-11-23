@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="880.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MealExerRecord">
+   <children>
+      <Label layoutX="7.0" layoutY="28.0" text="运动">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="Exercise" layoutX="-2.0" layoutY="64.0" prefHeight="177.0" prefWidth="599.0">
+        <columns>
+          <TableColumn fx:id="SportName" prefWidth="351.0" text="运动项目" />
+          <TableColumn fx:id="TrainSet" prefWidth="117.0" text="运动组数(组)" />
+            <TableColumn fx:id="BurnCal" prefWidth="129.0" text="消耗热量(kcal)" />
+        </columns>
+      </TableView>
+      <TableView fx:id="Diet" layoutY="293.0" prefHeight="318.0" prefWidth="599.0">
+        <columns>
+          <TableColumn fx:id="MealType" prefWidth="63.0" text="餐别" />
+          <TableColumn fx:id="FoodName" prefWidth="294.0" text="食物名称" />
+            <TableColumn fx:id="FoodWeight" prefWidth="109.0" text="摄入数量(g)" />
+            <TableColumn fx:id="IntakeCal" prefWidth="133.0" text="摄入热量(kcal)" />
+        </columns>
+      </TableView>
+      <Label layoutX="7.0" layoutY="253.0" text="饮食">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="ReturnHome" layoutX="648.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#ReturnHomeClicked" prefHeight="36.0" prefWidth="112.0" text="个人主页" />
+      <Label layoutX="622.0" layoutY="222.0" prefHeight="25.0" prefWidth="96.0" text="记录体重：">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="WeightRecord" layoutX="624.0" layoutY="266.0" prefHeight="36.0" prefWidth="187.0" />
+      <Label layoutX="622.0" layoutY="335.0" text="记录日期：">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="WeightRecordDay" layoutX="622.0" layoutY="376.0" prefHeight="36.0" prefWidth="194.0" />
+      <Button fx:id="AddRecord" layoutX="648.0" layoutY="476.0" mnemonicParsing="false" onMouseClicked="#AddRecordClicked" prefHeight="36.0" prefWidth="112.0" text="记录" />
+      <DatePicker fx:id="ExerDietRcdDay" layoutX="198.0" layoutY="23.0" prefHeight="36.0" prefWidth="203.0" />
+      <Button fx:id="Query" layoutX="502.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#QueryClicked" prefHeight="36.0" prefWidth="95.0" text="查询" />
+   </children>
+</AnchorPane>

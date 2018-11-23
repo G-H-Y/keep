@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="880.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RcmdRecipe">
+   <children>
+      <Button fx:id="ReturnHome" layoutX="666.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#ReturnHomeClicked" text="个人主页" />
+      <ImageView fx:id="RpImgLeft" fitHeight="700.0" fitWidth="402.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="RpImgRight" fitHeight="700.0" fitWidth="402.0" layoutX="428.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
+      <RadioButton fx:id="Recipe1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="113.0" text="食谱一" />
+      <RadioButton fx:id="Recipe2" layoutX="191.0" layoutY="16.0" mnemonicParsing="false" text="食谱二" />
+      <RadioButton fx:id="Recipe3" layoutX="365.0" layoutY="16.0" mnemonicParsing="false" text="食谱三" />
+      <RadioButton fx:id="Recipe4" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" text="食谱四" />
+      <RadioButton fx:id="Recipe5" layoutX="191.0" layoutY="76.0" mnemonicParsing="false" text="食谱五" />
+      <RadioButton fx:id="Recipe6" layoutX="365.0" layoutY="76.0" mnemonicParsing="false" text="食谱六" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="880.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomePage">
+   <children>
+      <AnchorPane prefHeight="830.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="Avatar" fitHeight="140.0" fitWidth="201.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="UserName" layoutX="247.0" layoutY="21.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="96.0" text="自律给我自由啦啦">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="Balance" layoutX="534.0" layoutY="22.0" prefHeight="25.0" prefWidth="250.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateTime" layoutX="534.0" layoutY="90.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="Weight" layoutX="17.0" layoutY="157.0" prefHeight="36.0" prefWidth="207.0">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="BMI" layoutX="320.0" layoutY="157.0" prefHeight="36.0" prefWidth="167.0">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="BFR" layoutX="573.0" layoutY="157.0" prefHeight="36.0" prefWidth="192.0">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="TodayExercise" layoutX="10.0" layoutY="193.0" prefHeight="36.0" prefWidth="542.0" text="今日运动">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="TodayMeal" layoutX="10.0" layoutY="236.0" prefHeight="36.0" prefWidth="542.0" text="今日饮食">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="BrkftCal" layoutX="10.0" layoutY="276.0" prefHeight="27.0" prefWidth="106.0" text="早餐(kcal):" />
+            <Label fx:id="LunchCal" layoutX="10.0" layoutY="313.0" prefHeight="24.0" prefWidth="106.0" text="午餐(kcal):" />
+            <Label fx:id="DinnerCal" layoutX="10.0" layoutY="346.0" prefHeight="24.0" prefWidth="106.0" text="晚餐(kcal):" />
+            <ProgressBar fx:id="InBrkft" layoutX="145.0" layoutY="276.0" prefHeight="27.0" prefWidth="310.0" progress="0.0" />
+            <ProgressBar fx:id="InLunch" layoutX="145.0" layoutY="312.0" prefHeight="27.0" prefWidth="310.0" progress="0.0" />
+            <ProgressBar fx:id="InDinner" layoutX="145.0" layoutY="351.0" prefHeight="27.0" prefWidth="310.0" progress="0.0" />
+            <LineChart fx:id="WeightChart" layoutX="8.0" layoutY="390.0" prefHeight="279.0" prefWidth="559.0" title="一周体重变化">
+              <xAxis>
+                <CategoryAxis fx:id="DayXaxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="WeightYaxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Button fx:id="RcmdRecipe" layoutX="589.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#RcmdRecipeClicked" prefHeight="36.0" prefWidth="227.0" text="减重食谱推荐" />
+            <Button fx:id="MealExerRcrd" layoutX="589.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#MealExerRcrdClicked" prefHeight="36.0" prefWidth="227.0" text="饮食运动记录" />
+            <Button fx:id="SportsInfo" layoutX="589.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#SportsInfoClicked" prefHeight="36.0" prefWidth="227.0" text="运动信息概览" />
+            <Button fx:id="FoodInfo" layoutX="589.0" layoutY="568.0" mnemonicParsing="false" onMouseClicked="#FoodInfoClicked" prefHeight="36.0" prefWidth="227.0" text="食物信息概览" />
+            <Button fx:id="OrdersRcrd" layoutX="589.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#OrdersRcrdClicked" prefHeight="36.0" prefWidth="227.0" text="历史订单记录" />
+            <Button fx:id="GoodsShop" layoutX="589.0" layoutY="421.0" mnemonicParsing="false" onMouseClicked="#GoodsShopClicked" prefHeight="36.0" prefWidth="227.0" text="精选商品购物" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

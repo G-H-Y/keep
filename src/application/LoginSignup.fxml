@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="880.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginSignup">
+   <children>
+      <TabPane layoutY="-56.0" prefHeight="880.0" prefWidth="830.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="登录">
+            <content>
+              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="838.0" prefWidth="830.0">
+                     <children>
+                        <ImageView fx:id="LoginImg" fitHeight="836.0" fitWidth="830.0" layoutX="1.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label layoutX="183.0" layoutY="378.0" text="用户：">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font></Label>
+                        <TextField fx:id="LoginUser" layoutX="274.0" layoutY="372.0" prefHeight="36.0" prefWidth="343.0" promptText="请输入您的用户名/用户ID" />
+                        <Label layoutX="183.0" layoutY="458.0" text="密码：">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font></Label>
+                        <Button fx:id="Login" layoutX="385.0" layoutY="519.0" mnemonicParsing="false" onMouseClicked="#LoginClicked" text="登录" AnchorPane.bottomAnchor="274.0" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="371.0" AnchorPane.topAnchor="519.0">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font></Button>
+                        <PasswordField fx:id="LoginPsw" layoutX="274.0" layoutY="452.0" prefHeight="36.0" prefWidth="344.0" promptText="请输入您的密码" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="注册">
+            <content>
+              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="826.0" prefWidth="830.0">
+                     <children>
+                        <ImageView fx:id="SignupImg" fitHeight="834.0" fitWidth="830.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label layoutX="32.0" layoutY="27.0" text="用户名：" AnchorPane.bottomAnchor="784.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="726.0" AnchorPane.topAnchor="27.0" />
+                        <TextField fx:id="SignupUser" layoutX="122.0" layoutY="21.0" prefHeight="36.0" prefWidth="627.0" AnchorPane.bottomAnchor="778.0" AnchorPane.leftAnchor="122.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="21.0" />
+                        <Label layoutX="41.0" layoutY="82.0" text="性别：" AnchorPane.bottomAnchor="729.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="735.0" AnchorPane.topAnchor="82.0" />
+                        <CheckBox fx:id="Female" layoutX="200.0" layoutY="82.0" mnemonicParsing="false" text="女" AnchorPane.bottomAnchor="728.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="579.0" AnchorPane.topAnchor="82.0" />
+                        <CheckBox fx:id="Male" layoutX="545.0" layoutY="82.0" mnemonicParsing="false" text="男" AnchorPane.bottomAnchor="728.0" AnchorPane.leftAnchor="545.0" AnchorPane.rightAnchor="234.0" AnchorPane.topAnchor="82.0" />
+                        <Slider fx:id="Age" blockIncrement="1.0" layoutX="120.0" layoutY="144.0" majorTickUnit="1.0" max="60.0" min="15.0" minorTickCount="0" prefHeight="21.0" prefWidth="630.0" showTickLabels="true" showTickMarks="true" AnchorPane.bottomAnchor="670.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="144.0" />
+                        <Label layoutX="41.0" layoutY="142.0" text="年龄：" AnchorPane.bottomAnchor="669.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="735.0" AnchorPane.topAnchor="142.0" />
+                        <Label layoutX="41.0" layoutY="194.0" text="身高：" AnchorPane.bottomAnchor="617.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="735.0" AnchorPane.topAnchor="194.0" />
+                        <Slider fx:id="Height" blockIncrement="0.01" layoutX="121.0" layoutY="196.0" majorTickUnit="5.0" max="200.0" min="140.0" minorTickCount="9" prefHeight="21.0" prefWidth="630.0" showTickLabels="true" showTickMarks="true" AnchorPane.bottomAnchor="618.0" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="196.0" />
+                        <Label layoutX="5.0" layoutY="243.0" text="当前体重：" AnchorPane.bottomAnchor="568.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="735.0" AnchorPane.topAnchor="243.0" />
+                        <Slider fx:id="InitialWeight" blockIncrement="0.5" layoutX="120.0" layoutY="245.0" majorTickUnit="5.0" max="125.0" min="40.0" minorTickCount="9" prefHeight="21.0" prefWidth="630.0" showTickLabels="true" showTickMarks="true" />
+                        <Label layoutX="5.0" layoutY="300.0" text="目标体重：" AnchorPane.bottomAnchor="511.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="735.0" AnchorPane.topAnchor="300.0" />
+                        <Slider fx:id="TargetWeight" blockIncrement="0.5" layoutX="121.0" layoutY="302.0" majorTickUnit="5.0" min="40.0" minorTickCount="9" prefHeight="21.0" prefWidth="631.0" showTickLabels="true" showTickMarks="true" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="302.0" />
+                        <Label layoutX="14.0" layoutY="369.0" text="开始减重日期：" AnchorPane.bottomAnchor="442.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="690.0" AnchorPane.topAnchor="369.0" />
+                        <DatePicker fx:id="StartLoseWeightDay" layoutX="14.0" layoutY="406.0" prefHeight="36.0" prefWidth="325.0" AnchorPane.bottomAnchor="393.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="491.0" AnchorPane.topAnchor="406.0" />
+                        <DatePicker fx:id="FinishLoseWeightDay" layoutX="443.0" layoutY="406.0" prefHeight="36.0" prefWidth="325.0" AnchorPane.bottomAnchor="393.0" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="406.0" />
+                        <Label layoutX="443.0" layoutY="369.0" text="目标减重日期：" AnchorPane.bottomAnchor="442.0" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="261.0" AnchorPane.topAnchor="369.0" />
+                        <Label layoutX="14.0" layoutY="471.0" text="设置密码：" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="726.0" AnchorPane.topAnchor="471.0" />
+                        <PasswordField fx:id="SetPsw" layoutX="14.0" layoutY="507.0" prefHeight="36.0" prefWidth="325.0" promptText="请设置您的账户密码" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="491.0" AnchorPane.topAnchor="507.0" />
+                        <PasswordField fx:id="RepeatPsw" layoutX="443.0" layoutY="507.0" prefHeight="36.0" prefWidth="325.0" promptText="请再次确认您的密码" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="507.0" />
+                        <Label layoutX="443.0" layoutY="471.0" text="确认密码：" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="297.0" AnchorPane.topAnchor="471.0" />
+                        <Button fx:id="Signup" layoutX="367.0" layoutY="579.0" mnemonicParsing="false" onMouseClicked="#SignupClicked" prefHeight="51.0" prefWidth="83.0" text="注册" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="367.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="579.0">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="ShowAge" layoutX="761.0" layoutY="130.0" prefHeight="24.0" prefWidth="65.0" AnchorPane.bottomAnchor="681.0" AnchorPane.leftAnchor="761.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="130.0" />
+                        <Label fx:id="ShowHeight" layoutX="761.0" layoutY="181.0" prefHeight="26.0" prefWidth="65.0" AnchorPane.bottomAnchor="628.0" AnchorPane.leftAnchor="761.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="181.0" />
+                        <Label fx:id="ShowInitialWght" layoutX="760.0" layoutY="231.0" prefHeight="24.0" prefWidth="68.0" AnchorPane.bottomAnchor="580.0" AnchorPane.leftAnchor="760.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="231.0" />
+                        <Label fx:id="ShowTgtWght" layoutX="761.0" layoutY="288.0" prefHeight="24.0" prefWidth="65.0" AnchorPane.bottomAnchor="523.0" AnchorPane.leftAnchor="761.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="288.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

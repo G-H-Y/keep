@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="880.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderRecord">
+   <children>
+      <ImageView fx:id="Img" fitHeight="150.0" fitWidth="830.0" pickOnBounds="true" />
+      <Button fx:id="ReturnHome" layoutX="689.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#ReturnHomeClicked" text="个人主页" />
+      <TableView fx:id="Orders" layoutY="150.0" prefHeight="730.0" prefWidth="830.0">
+        <columns>
+          <TableColumn fx:id="GoodsName" prefWidth="206.0" text="商品名称" />
+          <TableColumn fx:id="GoodsQuantity" prefWidth="114.0" text="购买数量" />
+            <TableColumn fx:id="UnitPrice" prefWidth="134.0" text="商品单价" />
+            <TableColumn fx:id="TotalCost" prefWidth="141.0" text="订单总价" />
+            <TableColumn fx:id="OrderDay" prefWidth="234.0" text="订单日期" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

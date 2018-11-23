@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1146.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FoodInformation">
+   <children>
+      <RadioButton fx:id="Grains" layoutY="2.0" mnemonicParsing="false" text="谷薯芋、杂豆、主食" />
+      <RadioButton fx:id="MeatEgg" layoutX="239.0" layoutY="2.0" mnemonicParsing="false" text="蛋类、肉类及制品" />
+      <RadioButton fx:id="MilkDairy" layoutX="513.0" mnemonicParsing="false" text="奶类及制品" />
+      <RadioButton fx:id="FruitVegtLact" layoutX="684.0" layoutY="2.0" mnemonicParsing="false" text="蔬果及菌藻" />
+      <RadioButton fx:id="NutSoyb" layoutY="40.0" mnemonicParsing="false" text="坚果、大豆及制品" />
+      <RadioButton fx:id="Drink" layoutX="239.0" layoutY="35.0" mnemonicParsing="false" text="饮料" />
+      <RadioButton fx:id="Snacks" layoutX="513.0" layoutY="41.0" mnemonicParsing="false" text="零食" />
+      <RadioButton fx:id="Dishes" layoutX="682.0" layoutY="41.0" mnemonicParsing="false" text="菜肴" />
+      <ListView fx:id="FoodList" layoutX="415.0" layoutY="96.0" prefHeight="519.0" prefWidth="415.0" />
+      <ImageView fx:id="FoodImg" fitHeight="150.0" fitWidth="200.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="650.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="415.0" AnchorPane.topAnchor="90.0" />
+      <Label fx:id="FoodName" layoutX="212.0" layoutY="90.0" />
+      <Label fx:id="UnitCalories" layoutX="212.0" layoutY="147.0" />
+      <Label fx:id="FoodRank" layoutX="212.0" layoutY="208.0" />
+      <BarChart fx:id="NutrientsContent" barGap="0.01" layoutX="8.0" layoutY="296.0" prefHeight="319.0" prefWidth="395.0" title="营养成分表(每100g)">
+        <xAxis>
+          <CategoryAxis fx:id="Nutrients" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="Content" minorTickCount="0" side="LEFT" tickLabelGap="5.0" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="877.0" layoutY="322.0" text="食物名称：" />
+      <TextField fx:id="SelectFood" layoutX="877.0" layoutY="366.0" prefHeight="36.0" prefWidth="242.0" />
+      <Label layoutX="877.0" layoutY="421.0" text="餐别：" />
+      <ComboBox fx:id="MealType" layoutX="877.0" layoutY="465.0" prefHeight="36.0" prefWidth="242.0" />
+      <Label layoutX="24.0" layoutY="624.0" text="数量(g):" />
+      <Slider fx:id="FoodQuantity" layoutX="118.0" layoutY="625.0" max="500.0" minorTickCount="1" prefHeight="21.0" prefWidth="617.0" showTickLabels="true" showTickMarks="true" />
+      <Label layoutX="877.0" layoutY="522.0" text="摄入热量：" />
+      <TextField fx:id="IntakeCalories" layoutX="877.0" layoutY="566.0" prefHeight="36.0" prefWidth="242.0" />
+      <Button fx:id="AddRecord" layoutX="945.0" layoutY="629.0" mnemonicParsing="false" onMouseClicked="#AddRecordClicked" prefHeight="36.0" prefWidth="106.0" text="添加" />
+      <Button fx:id="ReturnHome" layoutX="945.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#ReturnHomeClicked" prefHeight="36.0" prefWidth="106.0" text="个人主页" />
+      <Label fx:id="ShowQuantity" layoutX="762.0" layoutY="633.0" prefHeight="24.0" prefWidth="90.0" />
+   </children>
+</AnchorPane>
